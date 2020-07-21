@@ -2,12 +2,14 @@ import React from "react"
 import Title from "./Title"
 import Blog from "./Blog"
 import { Link } from "gatsby"
-export const Blogs = ({ blogs, title, showLink }) => {
+export const Blogs = ({ title, showLink, blogs }) => {
+  //   console.log("Blogs.js", blogs)
   return (
     <section className="section">
       <Title title={title} />
       <div className="section-center blogs-center">
         {blogs.map(blog => {
+          console.log("Blog item", blog)
           return <Blog key={blog.id} {...blog} />
         })}
       </div>

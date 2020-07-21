@@ -11,6 +11,10 @@ export default ({ data }) => {
     allStrapiProjects: { nodes: projects },
     allStrapiBlogs: { nodes: blogs },
   } = data
+
+  console.log(blogs)
+  console.log(projects)
+
   return (
     <Layout>
       <Hero />
@@ -49,6 +53,7 @@ export const query = graphql`
         content
         desc
         date(formatString: "MMMM do, YYYY")
+        id
         title
         category
         image {
