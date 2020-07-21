@@ -12,9 +12,6 @@ export default ({ data }) => {
     allStrapiBlogs: { nodes: blogs },
   } = data
 
-  console.log(blogs)
-  console.log(projects)
-
   return (
     <Layout>
       <Hero />

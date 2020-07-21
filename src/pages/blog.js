@@ -24,6 +24,7 @@ export const query = graphql`
         slug
         desc
         date(formatString: "MMMM do, YYYY")
+        id
         title
         category
         image {
