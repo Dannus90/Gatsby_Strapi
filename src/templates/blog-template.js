@@ -4,8 +4,21 @@ import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
 
 const ComponentName = ({ data }) => {
-  console.log(data)
-  return <h2>blog post template</h2>
+  const { content } = data.blog
+  return (
+    <Layout>
+      <section className="blog-template">
+        <div className="section-center">
+          <article className="blog-template">
+            <ReactMarkdown source={content} />
+          </article>
+          <Link to="/blog" className="btn center-btn">
+            Blog
+          </Link>
+        </div>
+      </section>
+    </Layout>
+  )
 }
 
 export const query = graphql`
